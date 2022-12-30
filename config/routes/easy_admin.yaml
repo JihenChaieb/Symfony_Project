@@ -1,0 +1,3 @@
+#easy_admin_bundel:
+ # resource:
+ # prefix: /admin

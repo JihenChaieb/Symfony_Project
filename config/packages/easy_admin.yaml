@@ -1,0 +1,29 @@
+easy_admin:
+  design:
+    menu:
+      -label: Dashboard
+  entities:
+    users:
+      class: App\Entity\User1
+      form:
+        fields:
+          - {property: 'First_name'}
+          - {property: 'Last_name'}
+          - {property: 'Adresse_mail'}
+          - {property: 'Role'}
+    Formateur:
+      class: App\Entity\Formateur
+      form:
+        fields:
+          - {property: 'First_name'}
+          - {property: 'Last_name'}
+          - {property: 'Adresse_Mail'}
+          - {property: 'Role'}
+    Formation:
+       class: App\Entity\Formation
+       list:
+         fields:
+           - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+         show:
+           fields:
+             - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }

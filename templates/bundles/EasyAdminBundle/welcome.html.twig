@@ -1,0 +1,38 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content_title 'Welcome to Page Admin ' %}
+
+{% block page_content %}
+ <div class="container">
+     <div class="row">
+         <div class="col-6 alert-info">
+
+             <span class="display-3">  {{ countuser['value'] }} </span> Condidat
+         </div>
+         <div class="col-6 alert-success">
+              <span class="display-3"> 4  </span> Formateur
+         </div>
+
+     </div>
+<br>
+     <div class="col-12 alert-danger">
+         <span style="margin-left: 45%" class="display-6"> {{ countformation['value'] }}  </span> Formation
+     </div>
+     <div class="row mt-3">
+     <div class="col-12">
+         <p class="h3"> Listes des Candidat</p>
+         <ul class="list-group">
+             {% for us in User %}
+             <li class="list-group-item d-flex justify-content-between align-items-center">
+                 {{ us.firstname }}
+                 {{ us.lastname }}
+                 <span class="badge badge-primary badge-pill"><i class="fa fa-maps"> </i></span>
+             </li>
+             {% endfor %}
+         </ul>
+
+     </div>
+     </div>
+ </div>
+{% endblock %}

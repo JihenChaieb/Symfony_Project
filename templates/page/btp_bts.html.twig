@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}master{% endblock %}
+ {% block stylesheets %}
+     {{ parent() }}
+ {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <div style="color: transparent">
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+
+    </div>
+    <div class="container" >
+
+        <ol class="breadcrumb">
+            <li><a href="{{ path('index') }}">Home</a></li>
+            <li class="active">BTP/BTS</li>
+        </ol>
+
+        <h1 style="text-align: center;color: rgba(1,54,130,0.62) ;font-style : italic"> BTP/BTS</h1>
+        <br>
+        <p style=" border-bottom:4px solid rgba(1,54,130,0.2) ;padding-top: 40px"></p>
+    </div>
+
+    <div class="container" style=" position: relative;width: 100%;">
+        <img  style="width: 100% ;" src="{{ asset('assets/images/master-maketing.png') }}"alt="Snow">
+        <a href="#"> <button class="btn"  style=" margin-top: -20%;position: relative;top: 30%;left: 50%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); background-color: rgba(226,4,4,0.53); color: white;font-size: 16px;padding: 15px 24px; border: none;cursor: pointer;border-radius: 5px">Inscrivez-vous</button></a>
+
+        <p style=" border-bottom:4px solid rgba(1,54,130,0.2) ;padding-top: 50px"></p>
+
+        <img  style="width: 100% ;" src="{{ asset('assets/images/master-data-science.jpg') }}"alt="Snow">
+        <a href="#"> <button class="btn"  style=" margin-top: -20%;position: relative;top: 30%;left: 50%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); background-color: rgba(226,4,4,0.53); color: white;font-size: 16px;padding: 15px 24px; border: none;cursor: pointer;border-radius: 5px">Inscrivez-vous</button></a>
+
+        <p style=" border-bottom:4px solid rgba(1,54,130,0.2) ;padding-top: 50px"></p>
+
+        <img  style="width: 100% ;" src="{{ asset('assets/images/master-dev.png') }}"alt="Snow">
+        <a href="#"> <button class="btn"  style=" margin-top: -20%;position: relative;top: 30%;left: 50%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); background-color: rgba(226,4,4,0.53); color: white;font-size: 16px;padding: 15px 24px; border: none;cursor: pointer;border-radius: 5px">Inscrivez-vous</button></a>
+    </div>
+
+
+{% endblock %}
